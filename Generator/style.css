@@ -1,0 +1,100 @@
+:root {
+  --grey: #817d92;
+  --yellow: #f8cd65;
+  --dark-grey: #24232c;
+  --orange: #fb7c58;
+  --very-dark-grey: #18171f;
+  --almost-white: #e6e5ea;
+  --neon-green: #a4ffaf;
+  --red: #f64a4a;
+}
+* {
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Jetbrains Mono", monospace;
+}
+ul {
+    list-style:none;
+}
+a {
+    text-decoration: none;
+  }
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color:var(--very-dark-grey);
+}
+h1 {
+    font-size:2.4rem;
+    margin-bottom:3rem;
+    font-weight: 700;
+    color:var(--grey);
+}
+.result-container {
+    width: 54rem;
+    background-color: var(--dark-grey);
+    padding: 1.9rem 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2.4rem;
+}
+ .result {
+    font-weight: 700;
+    font-size: 3.1rem;
+    color: var(--almost-white);
+    opacity: 0.25;
+}
+.result-container .clip-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+}
+.result-container .clip-btn::before {
+    content: attr(val);
+    position: absolute;
+    left: -8rem;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    animation-name: disappearance;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  .animation {
+    animation-name: disappearance;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+}
+@keyframes disappearance {
+    0%,
+    60% {
+      color: var(--neon-green);
+    }
+    100% {
+      color: var(--dark-grey);
+    }
+  }
+  .result-container .clip-btn img {
+    transition: filter 0.3s;
+    -webkit-transition: filter 0.3s;
+    -moz-transition: filter 0.3s;
+    -ms-transition: filter 0.3s;
+    -o-transition: filter 0.3s;
+  }
+  .result-container .clip-btn:hover img {
+    filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+  }
