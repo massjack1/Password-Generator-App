@@ -4,35 +4,69 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/lock.png">
   <title>Password generator app</title>
 </head>
 <body>
 <div class="container">
   <h1>Password Generator</h1>
   <div class="password-container">
+    <!-- Results Container -->
   <div class="result-container">
 <span id="result"></span>
 <button class="clip-btn" id="clipboard">
   <img src="./assets/images/icon-copy.svg" alt="Clipboard icon">
 </button>
   </div>
+  <!-- Settings Container -->
+  <div class="settings-container">
+      <div class="setting-1">
+        <label for="length">
+          Character Length
+          <span class="password-length">10</span>
+        </label>
+        <input id="length" type="range" min="0" max="20" step="1" />
+      </div>
+      <div class="setting-2">
+        <input id="uppercase" type="checkbox" checked />
+        <label for="uppercase">Include Uppercase Letters </label>
+      </div>
+      <div class="setting-3"></div>
+      <input id="lowwercase" type="checkbox" checked />
+          <label for="lowercase">Include Lowercase Letters</label>
+      <div class="setting-4">
+        <input id="numbers" type="checkbox" checked />
+          <label for="numbers" class="option-label">Include Numbers</label>
+      </div>
+      <div class="setting-5">
+        <input id="symbols" type="checkbox" />
+          <label for="symbols">Include Symbols </label>
+      </div>
+      <!-- Strength Container-->
+      <div class="strength">
+        <p>Strength</p>
+        <div class="level">
+          <h3>Medium</h3>
+          <span class="medium"></span>
+          <span class="medium"></span>
+          <span class="medium"></span>
+          <span></span>
+        </div>
+      </div>
+      <!-- Generate -->
+      <button class="generate-btn">
+        Generate
+        <img
+          src="assets/images/icon-arrow-right.svg"
+          alt="generate button icon"
+        />
+      </button>
+      </div>
+  </div>
 </div>
 </div>
-  Password Generator
-
   P4$5W0rD!
 
-  Character Length
-
-  Include Uppercase Letters
-  Include Lowercase Letters
-  Include Numbers
-  Include Symbols
-
-  Strength
-
-  Generate
   <script src="app.js"></script>
 </body>
 </html>
