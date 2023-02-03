@@ -9,64 +9,74 @@
   <title>Password generator app</title>
 </head>
 <body>
-<div class="container">
-  <h1>Password Generator</h1>
-  <div class="password-container">
-    <!-- Results Container -->
-  <div class="result-container">
-<span id="result"></span>
-<button class="clip-btn" id="clipboard">
-  <img src="./assets/images/icon-copy.svg" alt="Clipboard icon">
-</button>
-  </div>
-  <!-- Settings Container -->
-  <div class="settings-container">
-      <div class="setting-1">
-        <label for="length">
-          Character Length
-          <span class="password-length">10</span>
-        </label>
-        <input id="length" type="range" min="0" max="20" step="1" />
-      </div>
-      <div class="setting-2">
-        <input id="uppercase" type="checkbox" checked />
-        <label for="uppercase">Include Uppercase Letters </label>
-      </div>
-      <div class="setting-3"></div>
-      <input id="lowwercase" type="checkbox" checked />
-          <label for="lowercase">Include Lowercase Letters</label>
-      <div class="setting-4">
-        <input id="numbers" type="checkbox" checked />
-          <label for="numbers" class="option-label">Include Numbers</label>
-      </div>
-      <div class="setting-5">
-        <input id="symbols" type="checkbox" />
-          <label for="symbols">Include Symbols </label>
-      </div>
-      <!-- Strength Container-->
-      <div class="strength">
-        <p>Strength</p>
-        <div class="level">
-          <h3>Medium</h3>
-          <span class="medium"></span>
-          <span class="medium"></span>
-          <span class="medium"></span>
-          <span></span>
+  <main class="main-container">
+    <h1 class="heading">Password Generator</h1>
+    <div class="inner-container">
+      <section class="password-copy">
+        <div class="password">
+          <p class="password-text">P4$5W0rD!</p>
         </div>
-      </div>
-      <!-- Generate -->
-      <button class="generate-btn">
-        Generate
-        <img
-          src="assets/images/icon-arrow-right.svg"
-          alt="generate button icon"
-        />
-      </button>
-      </div>
-  </div>
-</div>
-</div>
-  <script src="app.js"></script>
+        <div class="copy-image">
+          <p class="copied-text"></p>
+          <img src="./assets/images/icon-copy.svg" alt="Copy graphic" class="copy">
+        </div>
+      </section>
+
+      <form class="form-section">
+        <div class="slider">
+          <div class="character">
+            <p class="character-text">Character Length</p>
+            <p class="character-amount"></p>
+          </div>
+          <div class="slider-container">
+            <label for="slider" class="hidden-label"></label>
+            <input type="range" name="slider" id="slider" min="1" max="20" value="10">
+          </div>
+        </div>
+
+        <div class="checkboxes">
+          <div class="checkbox-container">
+            <input type="checkbox" name="uppercase" id="uppercase" value="uppercase">
+            <label for="uppercase">Include Uppercase Letters</label>
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" name="lowercase" id="lowercase" value="lowercase">
+            <label for="lowercase">Include Lowercase Letters</label>
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" name="numbers" id="numbers" value="numbers">
+            <label for="numbers">Include Numbers</label>
+          </div>
+
+          <div class="checkbox-container">
+            <input type="checkbox" name="symbols" id="symbols" value="symbols">
+            <label for="symbols">Include Symbols</label>
+          </div>
+          <small class="error"></small>
+        </div>
+
+        <div class="strength-container">
+          <div class="strength">
+            <p class="strength-text">Strength</p>
+          </div>
+          <div class="strength-bars">
+            <p class="strength-word"></p>
+            <div class="bar" id="too-weak"></div>
+            <div class="bar" id="weak"></div>
+            <div class="bar" id="medium"></div>
+            <div class="bar" id="strong"></div>
+          </div>
+        </div>
+
+        <div class="button">
+          <button type="submit" class="generate">Generate<span>&rsaquo;</span></button>
+        </div>
+      </form>
+    </div>
+  </main>
+<script src="app.js"></script>
 </body>
 </html>
 
