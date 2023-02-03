@@ -106,10 +106,10 @@ body {
   font-size: 1rem;
   line-height: 1.3125rem;
 }
-
 .character-amount {
   font-size: 1.5rem;
-  line-height: 2rem;
+  line-height: 1.3125rem;
+  display: flex;
   color: var(--green);
 }
 
