@@ -38,7 +38,7 @@ const symbolsChar = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '?', '/',
 outPut.innerText = slider.value;
 
 slider.oninput = function () {
-    output.textContent = this.value;
+    outPut.textContent = this.value;
 }
 
 setBackgroundSize(input);
@@ -114,20 +114,20 @@ form.addEventListener('submit', (e) => {
 })
 
 graphCopy.addEventListener('click', () => {
-    const copyPassword = passwordArea.innerText;
+    const copyPassword = passwordSpace.innerText;
 
     navigator.clipboard.writeText(copyPassword);
-    copiedText.innerText = 'copied';
-    passwordArea.innerText = 'P4$5W0rD!';
-    passwordArea.style.opacity = '0.25';
+    copyText.innerText = 'copied';
+    passwordSpace.innerText = 'P4$5W0rD!';
+    passwordSpace.style.opacity = '0.25';
 
     setTimeout(() => {
-        copiedText.innerText = '';
+        copyText.innerText = '';
     }, 3000)
 
     form.reset();
     setBackgroundSize(input);
-    numberOutput.textContent = '10';
+    outPut.textContent = '10';
     resetBars();
 })
 
