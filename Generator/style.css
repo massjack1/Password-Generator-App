@@ -26,7 +26,6 @@ body {
   min-height: 100vh;
   font-family: 'JetBrains Mono', monospace;
   font-weight: 700;
-  font-size: 1.125rem;
   line-height: 1.5rem;
   color: var(--almost-white);
   background: linear-gradient(180deg, var(--almost-black) 0%, var(--almost-black) 100%);
@@ -99,16 +98,15 @@ body {
 .character {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.5rem;
+  font-size:1.5rem;
 }
 
 .character-text {
-  font-size: 1rem;
-  line-height: 1.3125rem;
+  display:flex;
+  line-height: 2rem;
 }
 .character-amount {
-  font-size: 1.5rem;
-  line-height: 1.3125rem;
+  line-height: 2rem;
   display: flex;
   color: var(--green);
 }
@@ -347,7 +345,7 @@ span {
   }
 
   .heading {
-      font-size: 1.5rem;
+      font-size: 1.7rem;
       line-height: 2rem;
       margin-bottom: 1.9375rem;
   }
@@ -371,7 +369,7 @@ span {
 
   .character-text {
       font-size: 1.125rem;
-      line-height: 1.5rem;
+      line-height: 2.625rem;
   }
 
   .character-amount {
